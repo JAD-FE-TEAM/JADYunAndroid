@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <view
+        android:id="@+id/head_bar"
+        class="com.jd.ad.demo.view.HeadBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/feed_normal"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="信息流广告单独展示"
+        android:textColor="@color/color_primary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/feed_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/feed_list"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="信息流广告LISTVIEW展示"
+        android:textColor="@color/color_primary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feed_normal"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/feed_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="信息流广告RECYCLERVIEW展示"
+        android:textColor="@color/color_primary"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feed_list"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/feed_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="信息流广告SCROLLVIEW展示"
+        android:textColor="@color/color_primary"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feed_recyclerview"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/feed_simulate"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="信息流广告模拟实际场景展示"
+        android:textColor="@color/color_primary"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feed_scrollview"
+        app:layout_constraintWidth_percent="0.8" />
+
+</android.support.constraint.ConstraintLayout>

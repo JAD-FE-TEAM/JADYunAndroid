@@ -1,0 +1,8 @@
+include ':demo'
+include ':jad_yun_core'
+include ':jad_yun_splash'
+include ':jad_yun_native'
+include ':jad_yun_interstitial'
+include ':jad_yun_banner'
+include ':jad_yun_feed'
+include ':jad_yun_sdk'

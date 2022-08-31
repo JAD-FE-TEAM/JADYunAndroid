@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">JADYunSDKDemo</string>
+
+    <string name="permissions_list">权限申请</string>
+    <string name="request_phone_state">读取设备信息权限</string>
+    <string name="request_storage">读写外部存储权限</string>
+    <string name="request_location">获取粗略定位权限</string>
+    <string name="request_location_gps">获取精确定位权限</string>
+    <string name="request_app_list">读取应用列表权限</string>
+
+    <string name="e_splash_title">模板渲染-开屏</string>
+    <string name="e_splash_multi_process_title">模板渲染-开屏-多进程</string>
+    <string name="e_feed_multi_request_title">模板渲染-开屏-批量请求</string>
+    <string name="e_banner_title">模板渲染-横幅</string>
+    <string name="e_inter_title">模板渲染-插屏</string>
+    <string name="e_feed_title">模板渲染-信息流</string>
+
+    <string name="e_feed_single">模板信息流-单独显示</string>
+    <string name="e_feed_listview">模板信息流-LISTVIEW</string>
+    <string name="e_feed_recyclerview">模板信息流-RECYCLERVIEW</string>
+    <string name="e_feed_scrollview">模板信息流-SCROLLVIEW</string>
+    <string name="e_feed_recyclerview_linear">RecyclerView-线性展示</string>
+    <string name="e_feed_recyclerview_grid">RecyclerView-网格展示</string>
+    <string name="e_feed_recyclerview_staggered">RecyclerView-瀑布流展示</string>
+    <string name="e_feed_simulate">模板信息流-仿真展示</string>
+
+    <string name="n_splash_title">自渲染-开屏</string>
+    <string name="n_banner_title">自渲染-横幅</string>
+    <string name="n_inter_title">自渲染-插屏</string>
+    <string name="n_feed_title">自渲染-信息流</string>
+
+    <!--尺寸配置-->
+    <string name="choose_scale_w_h">请选择宽高比</string>
+    <string name="scale_w_h">宽度/总宽度 = %ddp / %ddp = %.2f</string>
+
+    <!--加载按钮的文案-->
+    <string name="btn_ad_load_default">%1$s广告加载</string>
+    <string name="btn_ad_loading">%1$s广告加载中…</string>
+    <string name="btn_ad_load_failed">%1$s广告加载失败, 请尝试重试</string>
+
+    <!--广告流程、数据等相关文案-->
+    <string name="ad_load_success">%s广告加载成功</string>
+    <string name="ad_load_failed">%s广告加载失败【code:%d,message:%s】</string>
+    <string name="ad_render_success">%s广告渲染成功</string>
+    <string name="ad_render_failed">%s广告渲染失败【code:%d,message:%s】</string>
+    <string name="ad_exposure">%s广告曝光</string>
+    <string name="ad_count_down">%s广告倒计时：%d</string>
+    <string name="ad_skip">跳过 %d</string>
+    <string name="ad_click">%s广告被点击</string>
+    <string name="ad_dismiss">%s广告被关闭</string>
+    <string name="ad_data_price">%s广告价格是：%d</string>
+
+
+</resources>

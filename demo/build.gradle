@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+def androidCfg = rootProject.ext.androidConfig
+def AndroidLibraries = rootProject.ext.AndroidLibraries
+def ThirdLibraries = rootProject.ext.ThirdLibraries
+android {
+    compileSdkVersion androidCfg.demoCompileSdkVersion
+    buildToolsVersion androidCfg.demoBuildToolsVersion
+
+    defaultConfig {
+        applicationId androidCfg.applicationId
+        minSdkVersion androidCfg.demoMinSdkVersion
+        targetSdkVersion androidCfg.demoTargetSdkVersion
+
+        versionCode androidCfg.demoVersionCode
+        versionName androidCfg.demoVersionName
+
+        vectorDrawables.useSupportLibrary = true
+
+
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64' // 设置支持的SO库架构
+        }
+    }
+    flavorDimensions "channel"
+    productFlavors {
+        xiaomi {
+            dimension "channel"
+        }
+        jad {
+            dimension "channel"
+        }
+    }
+    signingConfigs {
+        release {
+        }
+    }
+
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation AndroidLibraries.appcompat
+    implementation AndroidLibraries.constraint
+    implementation AndroidLibraries.recyclerview
+    implementation ThirdLibraries.glide
+
+    //这里只做OAID 引用的方法: 将下载好的oaid  aar 放到 demo libs 目录下。具体请参看移动安全联盟
+    // 如需要请到移动安全联盟 下载 相关版本 进行OAID 获取  http://www.msa-alliance.cn/col.jsp?id=120
+    implementation files('libs/oaid_sdk_1.0.23.aar')
+
+    //方式1. 单广告位按需接入
+    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_core:1.0.0'   //必选，核心功能
+    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_splash:1.0.0' //可选，开屏广告
+    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_banner:1.0.0' //可选，横幅广告
+    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_feed:1.0.0'   //可选，信息流广告
+    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_interstitial:1.0.0' //可选，插屏广告
+    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_native:1.0.0' //可选，自渲染广告
+
+    //方式2. 全广告位接入
+    //implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_sdk:1.0.0'
+}
+

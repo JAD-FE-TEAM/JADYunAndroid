@@ -1,0 +1,16 @@
+*.iml
+.gradle
+local.properties
+.DS_Store
+/captures
+.externalNativeBuild
+.idea/
+debug.keystore
+TODO.md
+/jad_video
+/jad_videocache
+/repo
+/stub-plugin
+/oaid_provider
+.cxx/
+build/

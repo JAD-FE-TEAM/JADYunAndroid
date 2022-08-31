@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <view
+        android:id="@+id/head_bar"
+        class="com.jd.ad.demo.view.HeadBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/demo_seek_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/scale1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_border_normal"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="720*360"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="[1.76-2.15)"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/scale2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_border_normal"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="644*280"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="[2.15-2.57]"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/scale3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_border_normal"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="640*160"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="[3.52-4.48]"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/scale4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_border_normal"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="640*100"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="[5.63-7.17]"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="边界测试"
+            android:textColor="@color/color_normal"
+            android:textSize="12dp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_scale1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="1.76"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_scale2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="2.14"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_scale3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="2.15"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_scale4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="2.57"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_scale5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="3.52"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_scale6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="4.48"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_scale7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="5.63"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/tv_scale8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_border_normal"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="7.17"
+                android:textColor="@color/color_normal"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/demo_ad_id_and_load_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ad_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        tools:background="@color/color_primary"
+        tools:layout_height="100dp"
+        tools:layout_width="100dp" />
+</LinearLayout>
+

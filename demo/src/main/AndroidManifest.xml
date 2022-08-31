@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jd.ad.demo">
+
+    <!-- 必要权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 可选权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--可选，SDK提供 “获取地理位置权限” 和 “不给予地理位置权限，开发者传入地理位置参数” 两种方式上报用户位置，
+        两种方式均可不选，添加位置权限或参数将帮助投放定位广告-->
+    <!--请注意：无论通过何种方式提供给SDK用户地理位置，均需向用户声明地理位置权限将应用于广告投放，不强制获取地理位置信息-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--建议添加“query_all_package”权限，京东广告将通过此权限在Android R系统上判定广告对应的应用是否在用户的app上安装，
+    避免投放错误的广告，以此提高用户的广告体验。若添加此权限，需要在您的用户隐私文档中声明！-->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <uses-sdk tools:overrideLibrary="com.bun.miitmdid" />
+    <!-- Android12 包含使用 intent 过滤器的 activity、服务或广播接收器，您必须为这些应用组件显式声明 android:exported 属性。-->
+    <application
+        android:name=".DemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.App"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".expressad.feed.EFeedAdSimulateActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdScrollShowActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdScrollActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdListShowActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdShowActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdRecyclerShowActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdRecyclerActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <activity
+            android:name=".DemoMainActivity"
+            android:exported="true"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".expressad.splash.ESplashAdActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".expressad.splash.ESplashManagerActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.App.TransStatus" />
+        <activity
+            android:name=".expressad.splash.ESplashMultiRequestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.App.TransStatus" />
+        <activity
+            android:name=".expressad.splash.EMultiSplashAdActivity"
+            android:process="com.jd.process.splash"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.App.TransStatus" />
+        <activity
+            android:name=".expressad.banner.EBannerAdActivity"
+            android:label="模板横幅" />
+        <activity
+            android:name=".expressad.interstitial.EInterstitialAdActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedManagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expressad.feed.EFeedAdListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".nativead.splash.NSplashAdManagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".nativead.splash.NSplashAdActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".nativead.banner.NBannerAdActivity"
+            android:exported="true" />
+        <activity
+            android:name=".nativead.interstitial.NInterstitialAdActivity"
+            android:exported="true" />
+        <activity
+            android:name=".nativead.feed.NFeedAdActivity"
+            android:exported="true" />
+    </application>
+</manifest>

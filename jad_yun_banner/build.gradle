@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.JAD-FE-TEAM'
+apply plugin: 'com.kezong.fat-aar'
+
+def androidCfg = rootProject.ext.androidConfig
+
+android {
+    compileSdkVersion androidCfg.compileSdkVersion
+    buildToolsVersion androidCfg.buildToolsVersion
+    defaultConfig {
+        minSdkVersion androidCfg.minSdkVersion
+        targetSdkVersion androidCfg.targetSdkVersion
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    embed (name:'jad_yun_banner_v2.0.0', ext:'aar')
+}

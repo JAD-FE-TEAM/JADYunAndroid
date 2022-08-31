@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jad_native_insert_ad_root"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    tools:layout_height="400dp"
+    tools:layout_weight="400">
+
+    <ImageView
+        android:id="@+id/jad_native_insert_ad_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:background="#ff00ff" />
+
+    <ImageView
+        android:id="@+id/jad_close"
+        android:layout_width="20dp"
+        android:layout_height="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_close" />
+
+    <include
+        android:id="@+id/jad_ad_tag"
+        layout="@layout/layout_ad_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp" />
+
+    <ImageView
+        android:id="@+id/jad_logo"
+        android:layout_width="45dp"
+        android:layout_height="13dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitCenter" />
+</RelativeLayout>
