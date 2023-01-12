@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+    <view
+        android:id="@+id/head_bar"
+        class="com.jd.ad.demo.view.HeadBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/layout_preload_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@id/head_bar">
+
+        <Button
+            android:id="@+id/preload_ad_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="预加载广告"
+            android:textColor="@color/color_primary" />
+        <Button
+            android:id="@+id/preload_ad_btn_multi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="预加载广告 - 多进程"
+            android:textColor="@color/color_primary" />
+    </LinearLayout>
+</RelativeLayout>
