@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_gray">#EFEFF4</color> <!-- 列表默认背景颜色 -->
+    <color name="lightgray">#D3D3D3</color> <!-- 亮灰色 -->
+    <color name="color_primary">#FF018786</color>
+    <color name="color_test">#FF03DAC5</color>
+
+    <color name="color_normal">#666666</color>
+</resources>
