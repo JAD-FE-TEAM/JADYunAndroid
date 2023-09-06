@@ -1,0 +1,23 @@
+/**
+ * 打正式包时，Demo要依赖的SDK
+ */
+dependencies {
+    // 方式一，手动接入
+    // 单包：sdk
+    implementation fileTree(dir: 'libs', include: ['jad_yun_sdk_*.aar'])
+//    // 组件包：core + splash or feed ...
+//    implementation fileTree(dir: 'libs', include: ['jad_yun_core_*.aar'])
+//    implementation fileTree(dir: 'libs', include: ['jad_yun_splash_*.aar'])
+//    implementation fileTree(dir: 'libs', include: ['jad_yun_feed_*.aar'])
+//    implementation fileTree(dir: 'libs', include: ['jad_yun_native_*.aar'])
+//
+//    // 方式二，自动接入
+//    // 单包：sdk
+//    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_sdk:x.x.x'
+//    // 组件包：core + splash or feed ...
+//    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_core:x.x.x'
+//    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_splash:x.x.x'
+//    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_feed:x.x.x'
+//    implementation 'com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_native:x.x.x'
+
+}
