@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/jad_splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <FrameLayout
+        android:id="@+id/click_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#AD000000"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:shadowRadius="3.0"
+                android:text="点击前往第三方应用或页面"
+                android:textColor="#FFFFFFFF"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="8.5dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/click_arrow" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/jad_logo"
+        android:layout_width="26.5dp"
+        android:layout_height="12dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="51.5dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/jad_splash_skip_btn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/jad_btn_skip_background"
+        android:gravity="center"
+        android:shadowRadius="3.0"
+        android:text="跳过 --"
+        android:textColor="@color/jad_white"
+        android:textSize="11sp" />
+
+</FrameLayout>
