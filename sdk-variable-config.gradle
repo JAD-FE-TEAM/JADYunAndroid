@@ -1,0 +1,5 @@
+  ext {
+      sdkVersionCode = 20241113
+      sdkVersionName = '2.6.10'
+      isRelease = true
+  }
