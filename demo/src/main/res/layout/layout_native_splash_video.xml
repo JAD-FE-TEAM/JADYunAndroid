@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/fl_ad_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <VideoView
+                android:id="@+id/vv_video"
+                tools:layout_height="match_parent"
+                tools:layout_width="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/fl_ad_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:layout_height="match_parent"
+                tools:layout_width="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/player_play" />
+        </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="50dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/jad_logo"
+        android:layout_width="26.5dp"
+        android:layout_height="12dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/jad_splash_skip_btn"
+        android:layout_alignParentRight="true"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/jad_btn_skip_background"
+        android:gravity="center"
+        android:shadowRadius="3.0"
+        android:text="跳过 --"
+        android:textColor="@color/jad_white"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:id="@+id/iv_volume"
+        android:layout_width="16dp"
+        android:layout_centerVertical="true"
+        android:layout_height="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/jad_splash_skip_btn"
+        android:src="@mipmap/player_no_volume" />
+
+</RelativeLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
